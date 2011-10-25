@@ -1,0 +1,31 @@
+<!-- this is adminfooter.phtml -->
+ <div class="footer" id="footer">
+<a href="<%syspref var="site.url"%>">home</a>&nbsp;&nbsp;:&nbsp;&nbsp;
+<a href="/space/contact%20info">contact info</a>
+</br>
+<center>
+<%syspref var="site.copyright" %>
+</p></center>
+</div>
+
+<script src="/static/javascripts/dojo.js"></script>
+<script type='text/javascript'>
+dojo.hostenv.setModulePrefix("fins",
+                                "/static/javascripts/fins"
+);
+dojo.require("dojo.widget.*");
+dojo.require("fins.widget.*");
+dojo.require("fins.widget.ComboPicker");
+//dojo.widget.getParser().createComponents(document);
+</script>
+<script src="/static/javascripts/menulayer.js" type="text/javascript"></script>
+<script src="/static/javascripts/rounded-corners.js" type="text/javascript"></script>
+<script src="/static/javascripts/bootstrap.js" type="text/javascript"></script>
+<script type="text/javascript">
+<% list_retrieve var="$jsfooter" %>
+make_corners();
+</script>
+</body>
+</html>
+
+

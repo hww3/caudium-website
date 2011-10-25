@@ -1,0 +1,496 @@
+/*
+Theme Name: Caudium
+Original Theme URI: http://www.kaushalsheth.com/
+Design Name: Caudium
+Description: Migrated from Prozac theme ported to Wordpress.
+Version: 1.0
+Author: Kaushal Sheth
+Author URI: http://www.kaushalsheth.com
+*/
+
+
+/******* structure and layout *******/
+body {
+font-family:Arial, Helvetica, sans-serif; 
+font-size: 9pt; 
+color: #000000; 
+padding:0;
+background: #8E979C url('images/bg.gif');
+text-align:center; margin-left:0; margin-right:0; margin-top:10px; margin-bottom:0
+}
+
+.wrap {
+position:relative;
+width:780px;
+margin:0 auto;
+padding:0;
+text-align:center;
+background: #ffffff url('images/header.png') no-repeat;
+border-left:1px solid #36746a;
+border-right:1px solid #36746a;
+border-top:1px solid #36746a;
+/*
+border-left:1px solid #f1b75f;
+border-right:1px solid #f1b75f;
+border-top:1px solid #f1b75f
+*/
+}
+
+.header {
+position:relative;
+clear:none;
+width:770px;
+height:42px;
+margin:76px 0 0 0;
+padding:0 0 0 0;
+background:transparent;
+color:#ffffff;
+text-align:right;
+}
+
+.topnav {
+position:relative;
+clear:both;
+width:780px;
+height:21px;
+margin:0 0 0 0;
+padding:0 0 0 0;
+background:#cccccc;
+font-size:8pt;
+}
+
+.container {
+position:relative;
+clear:both;
+width:760px;
+margin:0px;
+padding:0 0 0 0;
+background:#ffffff;
+color:#000000;
+text-align:left;
+}
+
+.page_body {
+  margin: 10px;
+  width: 610px;
+}
+
+.news_right {
+position:relative;
+float:right;
+clear:both;
+width:200px;
+margin:5px 0px 5px 10px;
+background:#BeCeCe;
+color:#465670;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:8pt;
+}
+
+.news p {
+margin:10px 10px;
+}
+
+.news h2 {
+   font-size: 14px;
+}
+
+.news_cnr_top {
+background:url('images/cnr_tr.gif') no-repeat top right;
+margin:0 -10px;
+}
+
+.news_cnr_bottom {
+background:url('images/cnr_br.gif') no-repeat top right;
+margin:0 -10px;
+}
+
+img.cnr {
+width:8px;
+height:8px;
+border:none;
+display: block !important;
+}
+
+.footer {
+position:relative;
+clear:both;
+width:780px;
+margin:20px 0 0 0;
+padding:4px 0 4px 0;
+background:#ffffff;
+font-size:8pt;
+text-align:center;
+border-top:1px solid #36746a;
+border-bottom:1px solid #36746a;
+}
+
+
+/******* top navigation *******/
+#nav ul{
+padding:0;
+margin:0;
+white-space: nowrap;
+font-size:8pt;
+color:#ffffff;
+float:left;
+width:100%;
+background:#ffffff url('images/topnav_bg_grey.gif');
+list-style-type:none
+}
+
+#nav ul li{
+display:inline;
+list-style:none;
+}
+
+#nav ul li a{
+margin: 0;
+background:#ffffff url('images/topnav_bg_grey.gif');
+color: #000000;
+text-decoration:none;
+float: left;
+border-right:1px solid #cccccc; padding-left:1em; padding-right:2em; padding-top:.25em; padding-bottom:.3em
+}
+
+#nav ul li a:hover{
+background:#8DA8D5 url('images/topnav_bg.gif');
+color: #ffffff;
+text-decoration:none;
+border-right:1px solid #cccccc
+}
+
+
+
+
+/******* links *******/
+
+a {
+color:#36746a;
+text-decoration:underline;
+}
+
+a:hover {
+color:#E39243;
+text-decoration:none;
+}
+
+#news a {
+color:#36746a;
+text-decoration:underline;
+}
+
+#news a:hover {
+color:#E39243;
+text-decoration:none;
+}
+
+#footer a {
+color:#36746a;
+text-decoration:none;
+}
+
+#footer a:hover {
+color:#D3812D;
+text-decoration:none;
+}
+
+/******* fonts and colors *******/
+
+.header strong {
+font-family:Verdana, Arial, Helvetica, sans-serif;
+color:#ffffff;
+font-size:13pt;
+letter-spacing:.4em;
+}
+
+.header em {
+font-family:Verdana, Arial, Helvetica, sans-serif;
+color:#ffffff;
+font-size:10pt;
+}
+
+
+.news_title {
+font-family:Arial, Helvetica, sans-serif;
+color:#465670;
+font-size:10pt;
+font-weight:bold;
+}
+
+.page_title {
+font-family:Arial, Helvetica, sans-serif;
+color:#4669A4;
+font-size:10pt;
+font-weight:bold;
+padding: 0 0 0 0;
+margin: 0 0 -8px 0;
+}
+
+
+/******* images *******/
+
+img {
+border:none;
+}
+
+.right img{
+position:relative;
+float:right;
+padding:0 0 0 0;
+margin:5px 2px 2px 5px;
+}
+
+.left img{
+position:relative;
+float:left;
+padding:0 0 0 0;
+margin:0 5px 0 2px;
+}
+
+
+
+/******* workarounds and hacks *******/
+.clearfix:after {
+content: "."; 
+display: block; 
+height: 0; 
+clear: both; 
+visibility: hidden;
+}
+
+.clearfix {display: inline-table;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block; z-index:10;}
+/* End hide from IE-mac */
+
+
+/*comment styling*/
+/* Comments Styling */
+#commentlist li {
+margin-bottom: 1.5em;
+padding-bottom: 1em;
+border-bottom: 1px solid #700000;
+}
+
+#commentform {
+margin: 1em 0;
+background: #ffffff;
+width: 40em
+}
+
+#commentform textarea {
+background: #f8f7f6;
+border: 1px solid #d6d3d3;
+width: 40em
+}
+#commentform textarea:hover {
+background: #FFFFFF;
+border: 1px solid #d6d3d3;
+}
+#commentform textarea:focus {
+background: #ffffff;
+border: 1px solid #939793;
+}
+
+#commentform #email, #commentform #author, #commentform #url {
+font-size: 1.1em;
+background: #f8f7f6;
+border: 1px solid #d6d3d3;
+width: 180px;
+}
+#commentform #email:hover, #commentform #author:hover, #commentform #url:hover {
+font-size: 1.1em;
+background: #ffffff;
+border: 1px solid #d6d3d3;
+width: 180px;
+}
+#commentform #email:focus, #commentform #author:focus, #commentform #url:focus {
+font-size: 1.1em;
+background: #ffffff;
+border: 1px solid #939793;
+width: 180px;
+}
+#commentform input{
+margin-bottom: 3px;
+}
+	
+blockquote {
+	margin: 15px 30px 0 10px;
+	padding-left: 20px;
+	border: 3px double #cecece;
+	font-style: italic;
+	}
+
+	/*post stylng*/
+.post{margin:10px 10px 25px 0;}
+
+.post .info{
+padding:3px 3px 3px 8px;
+border:1px solid #e3e4e4;
+background-color:#efefef;
+font-size:0.9em;
+color:#505050;
+}
+
+li.rssreader {
+  list-style-image:url('/static/images/Icon-Permalink.png');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* $Id: style.css,v 1.7 2008/02/01 21:29:21 hww3 Exp $ */
+
+table.acidfree {
+    margin: auto;
+    border-collapse: separate;
+}
+
+#acidfree-main {
+    margin: 0px;
+    border-collapse: separate;
+}
+
+tr.acidfree {
+    background-color: #c0c0c0;
+}
+
+tr.none {
+    background-color: transparent;
+    text-align: left;
+    vertical-align: top;
+}
+
+div.nowrap {
+    padding: 20px;
+    display: table-row;
+    width: 100%;
+}
+
+div.folder {
+    display: table-cell;
+    margin: auto;
+    width: 120px;
+    height: 90px;
+    border: none;
+    vertical-align: bottom;
+    text-align: center;
+    background: url(art/album.gif) center no-repeat;
+    cursor: pointer;
+}
+
+div.fullslide {
+    margin: auto;
+    padding: 0px;
+/*    border: 1px dashed #eaa; */
+    vertical-align: top;
+    text-align: center;
+}
+
+div.outer {
+    display: table-cell;
+    margin: auto;
+    padding: 0px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ccd #778 #778 #ccd;
+    background: #c0c0c0;
+    vertical-align: middle;
+}
+div.video {
+    background-image: url(art/filmstrip.png);
+}
+
+div.outer span {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 1px;
+}
+
+div.folder span {
+    display: inline-block;
+    height: 65px;
+    width: 1px;
+}
+
+img.acidfree {
+    margin: auto;
+    vertical-align: middle;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #778 #ccd #ccd #778;
+    background: #c0c0c0;
+}
+
+img.acidfree-plain {
+    margin: 0px;
+    border: none;
+    padding: 5px;
+}
+
+img.album-thumb {
+    margin-bottom: 9px;
+    vertical-align: middle;
+    border: 1px outset;
+    height: 55px;
+}
+
+div.album-thumb {
+   display: inline-block;
+}
+
+div.block-cell {
+    float: right;
+    margin-left: 5px;
+    margin-right: 5px;
+    clear: none;
+    background: transparent;
+    padding: 5px 0px 10px 0px;
+}
+.block-bottom {
+    font-size: 1px;
+    height: 0px;
+    clear: both;
+}
+.block-acidfree {
+    width: 180px;
+}
+
+div.floating-box {
+    float: left;
+    clear: none;
+    max-width: 150px;
+}
+
+/*
+for fast tables, use...
+<table style="table-layout:fixed;" width="600px">
+
+<col width="100px">
+<col width="300px">
+<col width="200px">
+
+<tr height="20px">
+<td>...<td>
+<td>...<td>
+<td>...<td>
+<tr>
+:
+<table>
+
+*/
+
+
