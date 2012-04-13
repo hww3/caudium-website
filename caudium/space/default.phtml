@@ -10,9 +10,13 @@
       <% if data["request"]["misc"]["object_is_weblog"] %>
       <% else %>
    <h3><%$title %></h3>
-<p>
      <% endif %>
+<small><img src="<%theme show="path"%>images/timeicon.gif" alt="" />
+<%$object.nice_created %> by <img src="<%theme show="path"%>images/author.gif" alt="" />
+<%$object.author.name%>
+</small><p/>
 <div class="flash-message"><% flash %></div>
+
 <% if data["user_object"] && ! data["request"]["misc"]["object_is_weblog"] %>
   <%$content%>
 <p>
@@ -28,11 +32,12 @@
 <%@ include file="space/_displayattachments.phtml"%>
 <p/>
 <%endif %>
-<i>
-Created by <%$author_username %>. Last updated by <%$editor_username %>,
+<!--
+<i>Created by <%$author_username %>. Last updated by <%$editor_username %>,
 <%friendly_date var="$object_version.created" %>. Version #<%$object_version.version%>.
 </i>      
-<p>
+-->
+<small>
 <% if data["request"]["misc"]["object_is_weblog"] %>
 <%else %>
 <% if sizeof(data->object["categories"]) %> Posted in <% implode var="$object.category_links" nice="and"%> 
@@ -42,7 +47,6 @@ Created by <%$author_username %>. Last updated by <%$editor_username %>,
             <% else %>
                  No comments
             <% endif %>
-<p>
  <strong>|</strong> <a id="PostComment" href="/exec/comments/<%$obj%>">Post
 a Comment</a> <strong>|</strong> <a href="/rss/<%$obj%>?type=comments">RSS Feed</a>
   <% if data["metadata"]["trackbacks"] %> <strong>|</strong> <a href="/exec/display_trackbacks/<%$obj%>" 
@@ -51,7 +55,9 @@ id="TrackBacks"><%sizeof var="$metadata.trackbacks"%> TrackBacks</a> <% endif %>
 id="PingBacks"><%sizeof var="$metadata.pingbacks"%> PingBacks</a> <% endif %>
 <strong>|</strong> <a id="BackLinks" 
 href="/exec/backlinks/<%$obj%>">BackLinks</a> |
+</small>
          <p/>
+
 <div id="wiper" style="display:none;"></div>
 <% endif %>
 <! -- bottom of pagebegin.phtml -->
