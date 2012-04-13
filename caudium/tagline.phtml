@@ -1,20 +1,46 @@
                  <!-- Begin Navigation -->
          <div id="navigation">
                 <ul id="mainNav">
+<%if data->section == "about"%>
                         <li id="mainNavOn">
+<%else%>
+                        <li id="mainNavOff">
+<%endif%>
                                 <%action_link controller="/space" args="about"%>About</a>
                         </li>
+
+<%if data->section == "support"%>
+                        <li id="mainNavOn">
+<%else%>
                         <li id="mainNavOff">
-                                <a href="">Support Forums</a>
+<%endif%>
+                                <%action_link controller="/space" args="support"%>Support Forums</a>
                         </li>
+
+
+<%if data->section == "modules"%>
+                        <li id="mainNavOn">
+<%else%>
                         <li id="mainNavOff">
-                                <a href="">Module Market</a>
+<%endif%>
+                                <%action_link controller="/space" args="modules"%>Module Market</a>
                         </li>
+
+
+<%if data->section == "documentation"%>
+                        <li id="mainNavOn">
+<%else%>
                         <li id="mainNavOff">
-                                <a href="">Documentation</a>
+<%endif%>
+                                <%action_link controller="/space" args="documentation"%>Documentation</a>
                         </li>
+
+<%if data->section == "contribute"%>
+                        <li id="mainNavOn">
+<%else%>
                         <li id="mainNavOff">
-                                <a href="">Get Involved</a>
+<%endif%>
+                                <%action_link controller="/space" args="contribute"%>Get Involved</a>
                         </li>
                 </ul>
 
