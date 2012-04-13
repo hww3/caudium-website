@@ -46,19 +46,20 @@ Language:  <%language_selector%>
 <p>
 
 <% if data["user_object"] %>
-<a href="/exec/logout">logout</a> <br/>
+<%action_link controller="/exec" action="logout"%>logout</a> <br/>
+<%action_link controller="/account"%>my account</a> <p/>
 <% if data["object_is_weblog"] %>
-<a href="/exec/post/<%blog_source%>" id="PostBlog">post blog</a> <br/>
+<a href="<%action_url controller="/exec" action="post" args="$blog_source"%>" id="PostBlog">post blog</a> <br/>
 <% endif %>
 <% if data["is_admin"]==1 %>
-<a href="/admin/">admin</a> <br/>
+<%action_link controller="/admin"%>admin</a> <br/>
    <% endif %>
    <% else %>
-<a href="/exec/login" id="Login">login</a> <br/>
+<a href="<%action_url controller="/exec" action="login"%>" id="Login">login</a> <br/>
 <% endif %>
 
 <% if data["user_object"]  %>
-<a href="/exec/actions/<%$obj%>" id="Actions">actions</a> <br/>
+<a href="<%action_url controller="/exec" action="actions" args="$obj"%>" id="Actions">actions</a> <br/>
 <% endif %>
 
                  </div>
