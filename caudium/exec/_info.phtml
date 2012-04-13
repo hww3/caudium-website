@@ -1,0 +1,25 @@
+<h2><%LOCALE id="199" string="Page Info"%></h2>
+<p>
+<%$object.title%> [<a href="<%$object.link%>">View</a>]
+<p>
+<b><%LOCALE id="200" string="Tiny Link"%>: </b> <a href="<%$object.tinylink%>"><%$object.tinylink%></a>
+<p>
+<b><%LOCALE id="201" string="Incoming Links"%></b><p>
+<% foreach var="$object.inlinks_links" val="link"%>
+<%$link%><br>
+<% end %>
+<p>
+<b><%LOCALE id="202" string="Outgoing Links"%></b><p>
+<% foreach var="$object.outlinks_links" val="link"%>
+<%$link%><br>
+<% end %>
+<p>
+
+<b><%LOCALE id="" string="Content Type"%>:</b> <%$object.datatype.mimetype%>
+[<%action_link controller="/exec" action="changedatatype" args="$object.path"%>Change</a>]
+<p>
+
+<b><%LOCALE id="" string="Author/Owner"%>:</b> <%$object.author.name%>
+[<%action_link controller="/exec" action="changeowner" args="$object.path"%>Change</a>]
+<p>
+
