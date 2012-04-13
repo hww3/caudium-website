@@ -1,0 +1,18 @@
+<p class="newsitem">
+		<span class="newsdate">
+			<%format_date format="ymd" var="$entry.created"%>
+		</span>
+		<span class="newsseparator">/</span>
+		<span class="newshead">
+			<%$subject%>
+		</span>
+		<br/>
+		<dd>
+			<%render content="$teaser" object="$entry"%>
+		</dd>
+		<li class="readMoreBullet">
+			<%action_link controller="/space" args="$entry.path"%>Read More...</a>
+		</li>
+		</p>
+
+

@@ -2,7 +2,7 @@
         <title><%syspref var="site.name" %> :: <%$title %></title>
         <%$heads %>
         <%@ include file="header.phtml" %>
-	<%@ include file="pagebegin.phtml" %>
+	<%@ include file="fpagebegin.phtml" %>
 
 <!-- we need to provide a header for wiki content. -->
 <% breadcrumbs var="$object.path" %>
@@ -14,19 +14,8 @@
      <% endif %>
 <div class="flash-message"><% flash %></div>
 <% if data["user_object"] && ! data["request"]["misc"]["object_is_weblog"] %>
-<% list_store name="jsfooter" val="dojo.require('dojo.widget.LayoutContainer');" %>
-<% list_store name="jsfooter" val="dojo.require('dojo.widget.TabContainer');" %>
-<% list_store name="jsfooter" val="dojo.require('dojo.widget.ContentPane');" %>
-<% list_store name="jsfooter" val="dojo.require('dojo.widget.LinkPane');" %>
-<div dojoType="LayoutContainer"><div dojoType="TabContainer" doLayout="false">
-<div dojoType="ContentPane" label="view">
-<div style="margin:10px">
   <%$content%>
 <p>
-</div>
-</div>
-<a dojoType="LinkPane" href="<%action_url controller="/exec" action="edit" args="$object.path" ajax="1" %>">edit</a>
-</div></div>
 <% else %>
   <%$content%>
 <% endif %>
@@ -40,7 +29,6 @@
 <%endif %>
 <p>
 
-</div>
 <%@include file="footer.phtml" %>
 <%@include file="bottom.phtml" %>
 

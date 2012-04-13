@@ -1,496 +1,367 @@
 /*
-Theme Name: Caudium
-Original Theme URI: http://www.kaushalsheth.com/
-Design Name: Caudium
-Description: Migrated from Prozac theme ported to Wordpress.
-Version: 1.0
-Author: Kaushal Sheth
-Author URI: http://www.kaushalsheth.com
+      Created by Keith Donegan of Code-Sucks.com
+	  
+	  E-Mail: Keithdonegan@gmail.com
+	  
+	  You can do whatever you want with these layouts,
+	  but it would be greatly appreciated if you gave a link
+	  back to http://www.code-sucks.com
+	  
 */
 
+* { padding: 0; margin: 0; }
 
-/******* structure and layout *******/
 body {
-font-family:Arial, Helvetica, sans-serif; 
-font-size: 9pt; 
-color: #000000; 
-padding:0;
-background: #8E979C url('images/bg.gif');
-text-align:center; margin-left:0; margin-right:0; margin-top:10px; margin-bottom:0
+ font-family: Helvetica, sans-serif;
+ font-size: 13px;
+ color: black;
+}
+#wrapper { 
+ width: *;
+ background-image: url(<% theme show="path"%>images/background.png);
+ background-repeat: repeat-x;
+ background-position: top 0px;
+ margin: 0 auto;
 }
 
-.wrap {
-position:relative;
-width:780px;
-margin:0 auto;
-padding:0;
-text-align:center;
-background: #ffffff url('images/header.png') no-repeat;
-border-left:1px solid #36746a;
-border-right:1px solid #36746a;
-border-top:1px solid #36746a;
-/*
-border-left:1px solid #f1b75f;
-border-right:1px solid #f1b75f;
-border-top:1px solid #f1b75f
-*/
+#l1wrapper { 
+ width: *;
+ background-image: url(<% theme show="path"%>images/l1background.png);
+ background-repeat: repeat-x;
+ background-position: top 0px;
+ margin: 0 auto;
 }
 
-.header {
-position:relative;
-clear:none;
-width:770px;
-height:42px;
-margin:76px 0 0 0;
-padding:0 0 0 0;
-background:transparent;
-color:#ffffff;
-text-align:right;
+#header {
+/* color: #333; */
+ width: 920px;
+ float: left;
+ padding: 20px;
+/* border: 1px solid #ccc; */
+ height: 314px;
+ padding: 10px;
+ margin: 0px 10px 0px 50px;
+ background-image: url(<% theme show="path"%>images/cow_fish_logo-400.png);
+ background-repeat: no-repeat;
+ background-position: 540px 22px;
+/* background: #E7DBD5; */
+/* border: 1px solid #ccc;*/ 
 }
 
-.topnav {
-position:relative;
-clear:both;
-width:780px;
-height:21px;
-margin:0 0 0 0;
-padding:0 0 0 0;
-background:#cccccc;
-font-size:8pt;
+#l1header {
+/* color: #333; */
+ width: 920px;
+ float: left;
+/* border: 1px solid #ccc; */
+ height: 94px;
+ padding: 10px;
+ margin: 0px 30px 0px 50px;
+margin-bottom: -15px;
+ background-image: url(<% theme show="path"%>images/cow_fish_logo-200.png);
+ background-repeat: no-repeat;
+ background-position: 540px 12px;
+/* background: #E7DBD5; */
+/* border: 1px solid #ccc;*/ 
 }
 
-.container {
-position:relative;
-clear:both;
-width:760px;
-margin:0px;
-padding:0 0 0 0;
-background:#ffffff;
-color:#000000;
-text-align:left;
+#navigation {
+ float: left;
+ width: 972px;
+ color: #ffffff;
+ padding: 12px;
+ height: 28px;
+ font-size: 18px;
+/* border: 1px solid #ccc; */ 
+ margin: 0px 0px 5px 0px;
+/* background: #BD9C8C; */
+}
+#main {
+ float: left;
+ width: 1000px;	
+}
+#leftcolumn {
+ float: left;
+ width: 250px;
+ color: black;
+ padding: 10px;
+ height: 350px;
+ font-size: 18px;
+/* border: 1px solid #ccc; */
+ margin: 0px 0px 5px 0px;
+/* background: #BD9C8C; */
 }
 
-.page_body {
-  margin: 10px;
-  width: 610px;
+#rightcolumn { 
+ float: right;
+ color: black;
+/* border: 1px solid #ccc; */
+/* background: #F2F2E6; */
+ margin: 0px 0px 5px 0px;
+ padding: 10px;
+ height: 350px;
+ width: 678px;
+ display: inline;
+}
+#l1rightcolumn { 
+ float: right;
+ color: black;
+/* border: 1px solid #ccc; */
+/* background: #F2F2E6; */
+ margin: 0px 0px 5px 0px;
+ padding: 10px;
+ width: 678px;
+ display: inline;
 }
 
-.news_right {
-position:relative;
-float:right;
-clear:both;
-width:200px;
-margin:5px 0px 5px 10px;
-background:#BeCeCe;
-color:#465670;
-font-family:Verdana, Arial, Helvetica, sans-serif;
-font-size:8pt;
+#l2rightcolumn { 
+ float: right;
+ color: black;
+/* border: 1px solid #ccc; */
+/* background: #F2F2E6; */
+ margin: 0px 0px 5px 0px;
+ padding: 10px;
+ width: 908px;
+ display: inline;
 }
 
-.news p {
-margin:10px 10px;
+#footer { 
+ width: 1000px;
+ clear: both;
+ color: #888888;
+ border-top: 1px solid #ccc;
+/* background: #BD9C8C; */
+ margin: 0px 0px 10px 0px;
+ padding: 10px;
 }
 
-.news h2 {
-   font-size: 14px;
+#blurb {
+ float: left;
+ width: 550px;
+ color: #ffffff;
+ padding-left: 20px;
+padding-top: 40px;
+ font-size: 18px;
+/* border: 1px solid #ccc; */
+ margin: 0px 0px 5px 0px;
+/* background: #BD9C8C; */
 }
 
-.news_cnr_top {
-background:url('images/cnr_tr.gif') no-repeat top right;
-margin:0 -10px;
-}
-
-.news_cnr_bottom {
-background:url('images/cnr_br.gif') no-repeat top right;
-margin:0 -10px;
-}
-
-img.cnr {
-width:8px;
-height:8px;
-border:none;
-display: block !important;
-}
-
-.footer {
-position:relative;
-clear:both;
-width:780px;
-margin:20px 0 0 0;
-padding:4px 0 4px 0;
-background:#ffffff;
-font-size:8pt;
-text-align:center;
-border-top:1px solid #36746a;
-border-bottom:1px solid #36746a;
-}
-
-
-/******* top navigation *******/
-#nav ul{
-padding:0;
-margin:0;
-white-space: nowrap;
-font-size:8pt;
-color:#ffffff;
-float:left;
-width:100%;
-background:#ffffff url('images/topnav_bg_grey.gif');
-list-style-type:none
-}
-
-#nav ul li{
-display:inline;
-list-style:none;
-}
-
-#nav ul li a{
-margin: 0;
-background:#ffffff url('images/topnav_bg_grey.gif');
-color: #000000;
-text-decoration:none;
-float: left;
-border-right:1px solid #cccccc; padding-left:1em; padding-right:2em; padding-top:.25em; padding-bottom:.3em
-}
-
-#nav ul li a:hover{
-background:#8DA8D5 url('images/topnav_bg.gif');
-color: #ffffff;
-text-decoration:none;
-border-right:1px solid #cccccc
-}
-
-
-
-
-/******* links *******/
-
-a {
-color:#36746a;
-text-decoration:underline;
-}
-
-a:hover {
-color:#E39243;
-text-decoration:none;
-}
-
-#news a {
-color:#36746a;
-text-decoration:underline;
-}
-
-#news a:hover {
-color:#E39243;
-text-decoration:none;
-}
-
-#footer a {
-color:#36746a;
-text-decoration:none;
-}
-
-#footer a:hover {
-color:#D3812D;
-text-decoration:none;
-}
-
-/******* fonts and colors *******/
-
-.header strong {
-font-family:Verdana, Arial, Helvetica, sans-serif;
-color:#ffffff;
-font-size:13pt;
-letter-spacing:.4em;
-}
-
-.header em {
-font-family:Verdana, Arial, Helvetica, sans-serif;
-color:#ffffff;
-font-size:10pt;
-}
-
-
-.news_title {
-font-family:Arial, Helvetica, sans-serif;
-color:#465670;
-font-size:10pt;
-font-weight:bold;
-}
-
-.page_title {
-font-family:Arial, Helvetica, sans-serif;
-color:#4669A4;
-font-size:10pt;
-font-weight:bold;
-padding: 0 0 0 0;
-margin: 0 0 -8px 0;
-}
-
-
-/******* images *******/
-
-img {
-border:none;
-}
-
-.right img{
-position:relative;
-float:right;
-padding:0 0 0 0;
-margin:5px 2px 2px 5px;
-}
-
-.left img{
-position:relative;
-float:left;
-padding:0 0 0 0;
-margin:0 5px 0 2px;
-}
-
-
-
-/******* workarounds and hacks *******/
-.clearfix:after {
-content: "."; 
-display: block; 
-height: 0; 
-clear: both; 
-visibility: hidden;
-}
-
-.clearfix {display: inline-table;}
-
-/* Hides from IE-mac \*/
-* html .clearfix {height: 1%;}
-.clearfix {display: block; z-index:10;}
-/* End hide from IE-mac */
-
-
-/*comment styling*/
-/* Comments Styling */
-#commentlist li {
-margin-bottom: 1.5em;
-padding-bottom: 1em;
-border-bottom: 1px solid #700000;
-}
-
-#commentform {
-margin: 1em 0;
-background: #ffffff;
-width: 40em
-}
-
-#commentform textarea {
-background: #f8f7f6;
-border: 1px solid #d6d3d3;
-width: 40em
-}
-#commentform textarea:hover {
-background: #FFFFFF;
-border: 1px solid #d6d3d3;
-}
-#commentform textarea:focus {
-background: #ffffff;
-border: 1px solid #939793;
-}
-
-#commentform #email, #commentform #author, #commentform #url {
-font-size: 1.1em;
-background: #f8f7f6;
-border: 1px solid #d6d3d3;
-width: 180px;
-}
-#commentform #email:hover, #commentform #author:hover, #commentform #url:hover {
-font-size: 1.1em;
-background: #ffffff;
-border: 1px solid #d6d3d3;
-width: 180px;
-}
-#commentform #email:focus, #commentform #author:focus, #commentform #url:focus {
-font-size: 1.1em;
-background: #ffffff;
-border: 1px solid #939793;
-width: 180px;
-}
-#commentform input{
-margin-bottom: 3px;
-}
-	
-blockquote {
-	margin: 15px 30px 0 10px;
+#blurb2 {
+	padding-top: 10px;
 	padding-left: 20px;
-	border: 3px double #cecece;
+	width: 550px;
+border: 1px solid #ccc;
+}
+
+#dl { 
+ float: right;
+ color: #333;
+/* border: 1px solid #ccc; */
+/* background: #F2F2E6; */
+ margin: 0px 0px 5px 0px;
+ padding-top: 140px;
+ width: 250px;
+ display: inline;
+}
+
+ul#mainNav
+{
+    margin-left: 70px;
+    padding: 0px;
+    list-style-position: inside;
+}       
+
+ul#mainNav li {
+        list-style-type: none; 
+        display: inline-block;
+        margin-right: 80px;
+        line-height: 20px;
+        height: 40px;
+        ﻿zoom: 1;
+    *display:inline;
+
+}
+
+ul#mainNav li.mainNavon
+{
+/*    background-image: url(../images/mainnavon.png); */
+    background-repeat: no-repeat;
+    background-position: center 0px;
+}
+
+ul#mainNav a
+{
+        font-size: 13pt;
+	    text-decoration: none;
+        color: #46bde3;
+}
+
+ul#mainNav a
+{
+        font-size: 13pt;
+	    text-decoration: none;
+        color: #fff;
+}
+
+li.readMoreBullet
+{
+    list-style-image: url(<% theme show="path"%>images/gtriangle.png);
+}
+
+ul
+{
+	padding-top: 12pt;	
+	line-height: 15pt;
+	margin-left: 24pt;
+}
+
+a 
+{
+	text-decoration: none;
+    color: #aaaaaa;
+}
+
+
+div#l1header a 
+{
+	text-decoration: none;
+    color: #000000;
+}
+
+h1, h2, h3, h4, h1 a, h2 a, h3 a, h4 a {
+
+    padding-top: 5px;
+    margin: 10px 0;
+    line-height: 100%;
+}
+
+div#blurb h3
+{
+	font-size:20pt;
+	font-weight: normal;
 	font-style: italic;
-	}
-
-	/*post stylng*/
-.post{margin:10px 10px 25px 0;}
-
-.post .info{
-padding:3px 3px 3px 8px;
-border:1px solid #e3e4e4;
-background-color:#efefef;
-font-size:0.9em;
-color:#505050;
-}
-
-li.rssreader {
-  list-style-image:url('/static/images/Icon-Permalink.png');
+	line-height: 1em;
+   color: #ffcc00;
 }
 
 
+div#blurb h4
+{
+	font-size:16pt;
+	font-weight: normal;
+	font-style: italic;
+	line-height: 1.5em;
+   color: #ffcc00;
 
-
-
-
-
-
-
-
-
-
-
-/* $Id: style.css,v 1.7 2008/02/01 21:29:21 hww3 Exp $ */
-
-table.acidfree {
-    margin: auto;
-    border-collapse: separate;
 }
 
-#acidfree-main {
-    margin: 0px;
-    border-collapse: separate;
+h1 { 
+    font-size: 48pt;
+    line-height: 16pt;
 }
 
-tr.acidfree {
-    background-color: #c0c0c0;
+h2 {
+    font-size: 18pt;
+    line-height: 100%;
+	margin: 0px 25px;
 }
 
-tr.none {
-    background-color: transparent;
-    text-align: left;
-    vertical-align: top;
+
+h3 {
+    font-size: 13pt;
 }
 
-div.nowrap {
-    padding: 20px;
-    display: table-row;
-    width: 100%;
+h4 {
+    font-size: 11pt;
 }
 
-div.folder {
-    display: table-cell;
-    margin: auto;
-    width: 120px;
-    height: 90px;
-    border: none;
-    vertical-align: bottom;
-    text-align: center;
-    background: url(art/album.gif) center no-repeat;
-    cursor: pointer;
+span.bullet {
+	font-size: 18pt;
+	color: #2995A5;
+    font-weight: normal;	
 }
 
-div.fullslide {
-    margin: auto;
-    padding: 0px;
-/*    border: 1px dashed #eaa; */
-    vertical-align: top;
-    text-align: center;
+span.head {
+	font-size: 18pt;
+	font-weight: bold;
+	color: #000000;
 }
 
-div.outer {
-    display: table-cell;
-    margin: auto;
-    padding: 0px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #ccd #778 #778 #ccd;
-    background: #c0c0c0;
-    vertical-align: middle;
+span.newshead {
+	font-weight: bold;
+	color: #000000;
 }
-div.video {
-    background-image: url(art/filmstrip.png);
+span.newsdate {
+	font-weight: normal;
+	color: #aaaaaa;
 }
-
-div.outer span {
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-    width: 1px;
+span.newsseparator {
+	font-weight: normal;
+	color: red;
 }
 
-div.folder span {
-    display: inline-block;
-    height: 65px;
-    width: 1px;
+span.newslink {
+	font-weight: normal;
+	color: red;
 }
 
-img.acidfree {
-    margin: auto;
-    vertical-align: middle;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #778 #ccd #ccd #778;
-    background: #c0c0c0;
+p.newsitem {
+  padding-top: 12pt;	
+	line-height: 15pt;
 }
 
-img.acidfree-plain {
-    margin: 0px;
-    border: none;
-    padding: 5px;
+div#l1rightcolumn p {
+  padding-top: 12pt;	
+	line-height: 15pt;
 }
 
-img.album-thumb {
-    margin-bottom: 9px;
-    vertical-align: middle;
-    border: 1px outset;
-    height: 55px;
+div#l2rightcolumn p {
+  padding-top: 12pt;	
+	line-height: 15pt;
 }
 
-div.album-thumb {
-   display: inline-block;
+div.download { 
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-color: transparent;
+  background-image: url("<% theme show="path"%>images/button.png");
+  width: 225px;
+  min-height: 73px;
+  height: auto !important;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 1em; 
+  margin-left: 0;
+  font-size: 26px;
+  font-weight: 20;
+  white-space: nowrap;
+  font-weight: bold;
+  font-family: helvetica, arial, sans-serif;
 }
 
-div.block-cell {
-    float: right;
-    margin-left: 5px;
-    margin-right: 5px;
-    clear: none;
-    background: transparent;
-    padding: 5px 0px 10px 0px;
-}
-.block-bottom {
-    font-size: 1px;
-    height: 0px;
-    clear: both;
-}
-.block-acidfree {
-    width: 180px;
+.download a { 
+  display: block;
+  margin-top: 10px;
+  margin-right: 8px;
+  margin-bottom: 0;
+  margin-left: 18px;
+  color: #ffffff;
+  padding-top: 12px;
+  text-decoration: none;
+  text-shadow: #667700 0px 2px 2px;
 }
 
-div.floating-box {
-    float: left;
-    clear: none;
-    max-width: 150px;
+.download span { 
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1em;
+  padding-left: 18px;
+  padding-top: 3px;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  background-color: transparent;
+  background-image: url("<% theme show="path"%>images/triangle.png");
 }
-
-/*
-for fast tables, use...
-<table style="table-layout:fixed;" width="600px">
-
-<col width="100px">
-<col width="300px">
-<col width="200px">
-
-<tr height="20px">
-<td>...<td>
-<td>...<td>
-<td>...<td>
-<tr>
-:
-<table>
-
-*/
-
-

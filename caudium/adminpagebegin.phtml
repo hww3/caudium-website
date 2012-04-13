@@ -1,20 +1,51 @@
-</head>
-<body>
-<div id="actions" class="menu"><div id="closebutton" class="closebutton"><a onclick="menuLayers.hide()">Close</a></div>
-<div id="actions_contents" class="action_contents"></div>
-</div>
+	</head>
+<body class="tundra">
+   <!-- Begin Wrapper -->
+   <div id="l1wrapper">
 
-<div class="wrap clearfix">
-  <div class="header"><strong><%syspref var="site.name" %></strong><br/><em><%syspref var="site.tagline" %></em></div>
-  <div class="topnav" id="nav">
-    <ul>
-      <%@include file="tagline.phtml" %>
-    </ul>
-  </div>
+         <!-- Begin Header -->
+         <div id="l1header">
+		<%action_link controller="/space"%>
+                       <h1><%syspref var="site.name" %></h1>
+                                <h2><%syspref var="site.tagline" %></h2>
+		</a>
 
-<div class="container clearfix">
+	</div>
+                 <!-- End Header -->
+
+<%@include file="tagline.phtml"%>
+
+        <div id="main">
+                 <!-- Begin Left Column -->
+                 <div id="leftcolumn">
+
 <!--
 Language:  <%language_selector%>
 -->
-<xdiv class="page_body">
+ <% snip snip="themes/default/portlet-1" %>
+
+                <p>
+                        &nbsp;
+                <p>
+
+<% if data["user_object"] %>
+<a href="/admin">admin</a>
+<p>
+<a href="/exec/logout">logout</a>
+<% else %>
+<a href="/exec/login" id="Login">login</a>
+<% endif %>
+
+
+
+                 </div>
+                 <!-- End Left Column -->
+
+                 <!-- Begin Right Column -->
+                 <div id="l1rightcolumn">
+
+
+
+
+
 

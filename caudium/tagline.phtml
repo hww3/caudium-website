@@ -1,18 +1,22 @@
-<li> <a href="/space/start">start</a> </li>
-<li> <a href="/space/object-index">index</a> </li>
-<% if data["user_object"] %>
-<li> <a href="/exec/logout">logout</a> </li>
-<% if data["object_is_weblog"] %>
-<li> <a href="/exec/post/<%$obj%>" id="PostBlog">post blog</a> 
-</li>
-<% endif %>
-<% if data["is_admin"]==1 %>
-<li> <a href="/admin/">admin</a> </li>
-   <% endif %>
-   <% else %>
-<li> <a href="/exec/login" id="Login">login</a> </li>
-<% endif %>
+                 <!-- Begin Navigation -->
+         <div id="navigation">
+                <ul id="mainNav">
+                        <li id="mainNavOn">
+                                <%action_link controller="/space" args="about"%>About</a>
+                        </li>
+                        <li id="mainNavOff">
+                                <a href="">Support Forums</a>
+                        </li>
+                        <li id="mainNavOff">
+                                <a href="">Module Market</a>
+                        </li>
+                        <li id="mainNavOff">
+                                <a href="">Documentation</a>
+                        </li>
+                        <li id="mainNavOff">
+                                <a href="">Get Involved</a>
+                        </li>
+                </ul>
 
-<% if data["user_object"]  %>
-<li> <a href="/exec/actions/<%$obj%>" id="Actions">actions</a> </li>
-<% endif %>
+                 </div>
+                 <!-- End Navigation -->

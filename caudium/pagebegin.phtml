@@ -1,35 +1,62 @@
-</head>
-<body>
-<div id="actions" class="menu"><div id="closebutton" class="closebutton"><a onclick="menuLayers.hide()">Close</a></div>
-<div id="actions_contents" class="action_contents"></div>
-</div>
+	</head>
+<body class="tundra">
+   <!-- Begin Wrapper -->
+   <div id="l1wrapper">
 
-<div class="wrap clearfix">
-  <div class="header"><strong><%syspref var="site.name" %></strong><br/><em><%syspref var="site.tagline" %></em></div>
-  <div class="topnav" id="nav">
-    <ul>
-      <%@include file="tagline.phtml" %>
-    </ul>
-  </div>
+         <!-- Begin Header -->
+         <div id="l1header">
+		<%action_link controller="/space"%>
+                       <h1><%syspref var="site.name" %></h1>
+                                <h2><%syspref var="site.tagline" %></h2>
+		</a>
 
-<div class="container clearfix">
-<div class="news_right clearfix rounded" style="z-index: 0;" id="news">
-<div style="margin: 5px;">
-<!--
-<div class="rounded news_right clearfix" id="news">
-<div class="news_cnr_top"><img src="<% theme show="path"%>images/cnr_tl.gif" alt="corner" width="8" height="8" class="cnr" style="display: none" /></div>
--->
+	</div>
+                 <!-- End Header -->
+
+<%@include file="tagline.phtml"%>
+
+        <div id="main">
+                 <!-- Begin Left Column -->
+                 <div id="leftcolumn">
+
 <!--
 Language:  <%language_selector%>
 -->
  <% snip snip="themes/default/portlet-1" %>
 
-<!--
-<div class="news_cnr_bottom"><img src="<% theme show="path"%>/images/cnr_bl.gif" alt="corner" width="8" height="8" 
-class="cnr" style="display: none" /></div>
--->
-</div>
-</div>
+                <p>
+                        &nbsp;
+                <p>
 
-<xdiv class="page_body">
+<% if data["user_object"] %>
+<a href="/exec/logout">logout</a>
+<br/>
+<% if data["object_is_weblog"] %>
+<a href="/exec/post/<%$obj%>" id="PostBlog">post blog</a>
+<br/>
+<% endif %>
+<% if data["is_admin"]==1 %>
+<a href="/admin/">admin</a> </li>
+   <% endif %>
+   <% else %>
+<br/>
+<a href="/exec/login" id="Login">login</a>
+<% endif %>
+<p>
+<% if data["user_object"]  %>
+<a href="/exec/actions/<%$obj%>" id="Actions">actions</a>
+<% endif %>
+
+
+
+                 </div>
+                 <!-- End Left Column -->
+
+                 <!-- Begin Right Column -->
+                 <div id="l1rightcolumn">
+
+
+
+
+
 

@@ -1,0 +1,68 @@
+	</head>
+<body class="tundra">
+   <!-- Begin Wrapper -->
+   <div id="wrapper">
+
+         <!-- Begin Header -->
+         <div id="header">
+
+                       <h1><%syspref var="site.name" %></h1>
+                                <h2><%syspref var="site.tagline" %></h2>
+<div style="clear:both">
+        <div id="blurb">
+                        <h3>
+                        Welcome to the Caudium Project!
+                        </h3>
+                        <h4>
+                        Caudium is a fast, modular web server with a friendly configuration interface
+                        and powerful extension capabilities.
+                        </h4>
+
+        </div>
+        <div id="dl">
+                <div class="download">
+                        <a href="">DOWNLOAD
+                                <span><%snip snip="current_version"%></span>
+                        </a>
+                </div>  </div>
+</div>
+
+</div>
+                 <!-- End Header -->
+
+<%@include file="tagline.phtml"%>
+
+        <div id="main">
+                 <!-- Begin Left Column -->
+                 <div id="leftcolumn">
+
+<!--
+Language:  <%language_selector%>
+-->
+ <% snip snip="themes/default/portlet-1" %>
+
+<p>
+  &nbsp;
+<p>
+
+<% if data["user_object"] %>
+<a href="/exec/logout">logout</a> <br/>
+<% if data["object_is_weblog"] %>
+<a href="/exec/post/<%blog_source%>" id="PostBlog">post blog</a> <br/>
+<% endif %>
+<% if data["is_admin"]==1 %>
+<a href="/admin/">admin</a> <br/>
+   <% endif %>
+   <% else %>
+<a href="/exec/login" id="Login">login</a> <br/>
+<% endif %>
+
+<% if data["user_object"]  %>
+<a href="/exec/actions/<%$obj%>" id="Actions">actions</a> <br/>
+<% endif %>
+
+                 </div>
+                 <!-- End Left Column -->
+
+                 <!-- Begin Right Column -->
+                 <div id="rightcolumn">
