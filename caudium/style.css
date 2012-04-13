@@ -182,11 +182,14 @@ ul#mainNav li {
 
 }
 
-ul#mainNav li.mainNavon
+ul#mainNav li#mainNavOn
 {
-/*    background-image: url(../images/mainnavon.png); */
+/*    background-image: url(<% theme show="path"%>images/mainnavon.png); */
+    font-weight: bold;
+    color: #555500;
     background-repeat: no-repeat;
     background-position: center 0px;
+    
 }
 
 ul#mainNav a
