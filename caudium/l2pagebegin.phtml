@@ -1,0 +1,59 @@
+	</head>
+<body class="tundra">
+   <!-- Begin Wrapper -->
+   <div id="l1wrapper">
+
+         <!-- Begin Header -->
+         <div id="l1header">
+		<%action_link controller="/space"%>
+                       <h1><%syspref var="site.name" %></h1>
+                                <h2><%syspref var="site.tagline" %></h2>
+		</a>
+
+	</div>
+                 <!-- End Header -->
+
+<%@include file="tagline.phtml"%>
+
+        <div id="main">
+                 <!-- Begin Left Column -->
+                 <div id="leftcolumn">
+
+<!--
+Language:  <%language_selector%>
+ <% snip snip="themes/default/portlet-1" %>
+
+                <p>
+ <% list_subpages template="default"%>
+
+                        &nbsp;
+                <p>
+
+<% if data["user_object"] %>
+<%action_link controller="/exec" action="logout"%>logout</a> <br/>
+<%action_link controller="/account"%>my account</a> <p/>
+<% if data["object_is_weblog"] %>
+<a href="<%action_url controller="/exec" action="post" args="$blog_source"%>" id="PostBlog">post blog</a> <br/>
+<% endif %>
+<% if data["is_admin"]==1 %>
+<%action_link controller="/admin"%>admin</a> <br/>
+   <% endif %>
+   <% else %>
+<a href="<%action_url controller="/exec" action="login"%>" id="Login">login</a> <br/>
+<% endif %>
+
+<% if data["user_object"]  %>
+<a href="<%action_url controller="/exec" action="actions" args="$obj"%>" id="Actions">actions</a> <br/>
+<% endif %>
+-->
+                 </div>
+                 <!-- End Left Column -->
+
+                 <!-- Begin Right Column -->
+                 <div id="l1rightcolumn">
+
+
+
+
+
+
