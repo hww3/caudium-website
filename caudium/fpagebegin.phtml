@@ -49,7 +49,7 @@ Language:  <%language_selector%>
 <%action_link controller="/exec" action="logout"%>logout</a> <br/>
 <%action_link controller="/account"%>my account</a> <p/>
 <% if data["object_is_weblog"] %>
-<a href="<%action_url controller="/exec" action="post" args="$blog_source"%>" id="PostBlog">post blog</a> <br/>
+<a href="<%action_url controller="/exec" action="post" args="$metadata.weblog_source_path"%>" id="PostBlog">post blog</a> <br/>
 <% endif %>
 <% if data["is_admin"]==1 %>
 <%action_link controller="/admin"%>admin</a> <br/>
