@@ -1,7 +1,7 @@
 	<%@ include file="top.phtml" %>
+        <%@ include file="header.phtml" %>
         <title><%syspref var="site.name" %> :: <%$title %></title>
         <%$heads %>
-        <%@ include file="header.phtml" %>
 	<%@ include file="pagebegin.phtml" %>
 
 <!-- we need to provide a header for wiki content. -->
@@ -61,6 +61,7 @@ href="/exec/backlinks/<%$obj%>">BackLinks</a> |
 <div id="wiper" style="display:none;"></div>
 <% endif %>
 <! -- bottom of pagebegin.phtml -->
+<%@include file="pageend.phtml" %>
 <%@include file="footer.phtml" %>
 <%@include file="bottom.phtml" %>
 
