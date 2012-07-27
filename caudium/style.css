@@ -368,3 +368,14 @@ div.download {
   background-color: transparent;
   background-image: url("<% theme show="path"%>images/triangle.png");
 }
+
+img {
+border:none;
+}
+
+input[type=image] {
+border:none;
+}
+
+
+
